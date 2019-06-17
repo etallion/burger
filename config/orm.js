@@ -52,6 +52,7 @@ var orm = {
     },
     updateOne: function(tableInput, obj, condition, cb){
             var queryString = "UPDATE" + tableInput;
+                 queryString += " SET ";
                 queryString += objToSql(obj);
                 queryString += "WHERE " + condition;
 
